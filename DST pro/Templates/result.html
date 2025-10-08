@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traffic Prediction Results</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #2F3C7E;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 36px;
+        }
+        p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+        p strong {
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Traffic Prediction Results</h1>
+        <p><strong>Car Count:</strong> {{ car_count|round|int }}</p>
+        <p><strong>Bike Count:</strong> {{ bike_count|round|int }}</p>
+        <p><strong>Bus Count:</strong> {{ bus_count|round|int }}</p>
+        <p><strong>Truck Count:</strong> {{ truck_count|round|int }}</p>
+        <p><strong>Total Count:</strong> {{ total_count|round|int }}</p>
+        <p><strong>Traffic Situation:</strong> {{ traffic_situation }}</p>
+    </div>
+</body>
+</html>
